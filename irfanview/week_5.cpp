@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <windows.h>
-
+ 
 #pragma warning(disable:4996) // 경고 메시지 4996을 무시하는 pragma 지시문
 
 #define W 256
