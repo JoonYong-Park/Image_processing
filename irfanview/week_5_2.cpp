@@ -97,7 +97,7 @@ void Varwibetween(int T, struct VAR* V, unsigned char* readbuf) {
 
 }
 
-int main(void) {
+int main_52(void) {
 
 	FILE* fp; // 파일 포인터 선언
 
@@ -137,12 +137,29 @@ int main(void) {
 	for (int i = 1; i < 257; i++) {
 		Varwithin(T = i , &V, readbuf);
 		printf("<%d> \nblack: %f white: %f \n",i, V.black, V.white);
-		if (V.black + V.white < min_withhin) {
+		
+		// 합이 최소
+		/*if (V.black + V.white < min_withhin) {
 			min_withhin = V.black + V.white;
 			min_withhin_t = T;
+		}*/
+		// 차이가 최소
+		if (V.black > V.white) {
+			if (min_withhin > V.black - V.white) { 
+				min_withhin = V.black - V.white;
+				min_withhin_t = T;
+			}
+		}
+		else
+		{
+			if (min_withhin > V.white - V.black) {
+				min_withhin = V.white - V.black;
+				min_withhin_t = T;
+			}
 		}
 		Varwibetween(T = i , &V, readbuf);
 		printf("between: %f\n", V.vbetween);
+
 		if (V.vbetween > max_between) {
 			max_between = V.vbetween;
 			max_between_t = T;
