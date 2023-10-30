@@ -23,15 +23,15 @@ int main_2() {
 	// 영상 편집: 영상을 수직으로 뒤집기 (Readbuf의 값을 뒤집어 Writebuf에 저장)
 	for (int i = 0; i < 256; i++)
 		for (int j = 0; j < 256; j++)
-			//Writebuf[j][i] = Readbuf[256 - j][i]; // 상 하 뒤집기
+			Writebuf[j][i] = Readbuf[256 - j][i]; // 상 하 뒤집기
 			//Writebuf[j][i] = Readbuf[j][256 - i]; // 좌 우 뒤집기
-			Writebuf[j][i] = Readbuf[255 - j][255 - i]; // 상하좌우 뒤집기
+			//Writebuf[j][i] = Readbuf[255 - j][255 - i]; // 상하좌우 뒤집기
 
 
 	// 영상 저장
-	//fp = fopen("LENA_256x256_8bit_2_up_down.raw", "wb"); // "LENA_256x256_8bit_new.raw" 파일을 쓰기 모드로 열기
+	fp = fopen("LENA_256x256_8bit_2_up_down222222.raw", "wb"); // "LENA_256x256_8bit_new.raw" 파일을 쓰기 모드로 열기
 	//fp = fopen("LENA_256x256_8bit_3_left_right.raw", "wb"); // "LENA_256x256_8bit_new.raw" 파일을 쓰기 모드로 열기
-	fp = fopen("LENA_256x256_8bit_4_up_down_left_right.raw", "wb"); // "LENA_256x256_8bit_new.raw" 파일을 쓰기 모드로 열기
+	//fp = fopen("LENA_256x256_8bit_4_up_down_left_right.raw", "wb"); // "LENA_256x256_8bit_new.raw" 파일을 쓰기 모드로 열기
 	
 	for (int i = 0; i < 256; i++)
 		fwrite(Writebuf[i], 1, 256, fp); // Writebuf 배열의 데이터를 파일에 쓰기

@@ -1,7 +1,7 @@
 #include <stdio.h>
 #pragma warning(disable:4996) // 경고 메시지 4996을 무시하는 pragma 지시문
 
-int main_32() {
+int main() {
     ////////// 2. 히스토그램 평활화 //////////
 
     FILE* fp;                         // 파일 포인터 선언
@@ -34,6 +34,7 @@ int main_32() {
     for (int i = 0; i < 256; i++)
         printf("%3d: %3f\n", i, Histogram[i]); // 히스토그램 출력
 
+    /*********************************************/
     // 누적합
     for (int i = 0; i < 256; i++) {
         if(i == 0) 

@@ -29,6 +29,7 @@ int main_3(void) {
     for (int i = 0; i < 256; i++) {
         Histogram[i] = Histogram[i] / (256 * 256);
     }
+
     // 히스토그램 출력
     for (int i = 0; i < 256; i++)
         printf("%3d: %3f\n", i, Histogram[i]); // 히스토그램 출력
