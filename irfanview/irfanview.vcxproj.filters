@@ -42,5 +42,14 @@
     <ClCompile Include="week_7.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="week_9.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="week_10.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="C_pro.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

@@ -128,6 +128,8 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Change_File_Type.cpp" />
+    <ClCompile Include="C_pro.c" />
+    <ClCompile Include="week_10.c" />
     <ClCompile Include="week_2.cpp" />
     <ClCompile Include="week_3.cpp" />
     <ClCompile Include="week_3_2.cpp" />
@@ -136,6 +138,7 @@
     <ClCompile Include="week_6.cpp" />
     <ClCompile Include="week_6_2.cpp" />
     <ClCompile Include="week_7.cpp" />
+    <ClCompile Include="week_9.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

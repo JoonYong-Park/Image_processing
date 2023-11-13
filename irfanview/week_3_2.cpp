@@ -1,7 +1,7 @@
 #include <stdio.h>
 #pragma warning(disable:4996) // 경고 메시지 4996을 무시하는 pragma 지시문
 
-int main() {
+int main_32() {
     ////////// 2. 히스토그램 평활화 //////////
 
     FILE* fp;                         // 파일 포인터 선언
