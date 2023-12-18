@@ -18,7 +18,7 @@ int main_62() {
     for (int i = 0; i < 256; i++) {
         fread(Readbuf[i], 1, 256, fp);// (저장할 주소, 데이터 크기, 데이터 개수, 파일포인터)
     }
-    fclose(fp);
+    fclose(fp); 
 
     // 감마수정
     for (int i = 0; i < 256; i++) {

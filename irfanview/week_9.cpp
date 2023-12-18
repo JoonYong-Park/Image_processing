@@ -51,15 +51,6 @@ int main_9() {
       		}
     }
 
-    
-
-
-
-
-
-
-
-
     // 영상 저장
     fp = fopen("LENA_256x256_8bit_t_Otsu_morphology.raw", "wb");
     for (int i = 0; i < 256; i++)

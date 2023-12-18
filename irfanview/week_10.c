@@ -16,11 +16,6 @@ int main_10() {
 
     // 영상 회전(전방 변환) 동차 행렬
     
-
-
-
-
-
     /*for (int i = 0; i < 256; i++) {
 		for (int j = 0; j < 256; j++) {
 			int x = (int)(i * 0.8660254 + j * 0.5);
@@ -33,7 +28,8 @@ int main_10() {
 			}
 		}
 	}*/
-    // 영상의 중심을 기준으로 회전(전방계산) 동차 행렬 알고리즘
+
+    // 영상의 중심을 기준으로 회전(전방계산) 동차 행렬
     //for (int i = 0; i < 256; i++) {
     //    for (int j = 0; j < 256; j++) {
     //        
@@ -55,8 +51,9 @@ int main_10() {
     // 영상을 2배 확대(최근방 이웃 보간법) 동차 행렬
     /*for (int i = 0; i < 256; i++) {
         for (int j = 0; j < 256; j++) {
-            int x = (int)(i * 0.5);
-            int y = (int)(j * 0.5);
+            int x = (int)(i * 1.5);
+            int y = (int)(j * 1.5);
+
             if (x >= 0 && x < 256 && y >= 0 && y < 256) {
                  Writebuf[i][j] = Readbuf[x][y];
             }
@@ -66,12 +63,25 @@ int main_10() {
         }
     }*/
 
-    // 영상을 2배 축소(burt필터) 동차행렬
+    // 영상을 2배 축소(최근방 이웃 보간법) 동차 행렬
     for (int i = 0; i < 256; i++) {
+        for (int j = 0; j < 256; j++) {
+
+            int x = (int)(i * 0.7);
+            int y = (int)(j * 0.7);
+            if (x >= 0 && x < 256 && y >= 0 && y < 256) {
+                Writebuf[i][j] = Readbuf[x][y];
+            }
+        }
+    }
+
+
+    // 영상을 2배 확대(burt필터) 동차행렬
+    /*for (int i = 0; i < 256; i++) {
 		for (int j = 0; j < 256; j++) {
 
 			int x = (int)(i * 2);
-			int y = (int)(j * 2);
+			int y = (int)(j * 2);  
 			if (x >= 0 && x < 256 && y >= 0 && y < 256) {
 				Writebuf[i][j] = Readbuf[x][y];
 			}
@@ -79,19 +89,25 @@ int main_10() {
 				Writebuf[i][j] = 0;
 			}
 		}
-	}
+	}*/
+    // 영상을 1배 축소 가운데 기준으로   동차행렬
+   /* for (int i = 0; i < 256; i++) {
+        for (int j = 0; j < 256; j++) {
+            int x = (int)(i * 1.5);
+            int y = (int)(j * 1.5);
+            if (x >= 0 && x < 256 && y >= 0 && y < 256) {
+                Writebuf[i][j] = Readbuf[x][y];
+            }
+            else {
+                Writebuf[i][j] = 0;
+            }
+        }
+    }*/
 
 
-
-
-
-
-
-
-    
 
     // 영상 저장
-    fp = fopen("LENA_256x256_8bit_2_up_down3333333333333333.raw", "wb");
+    fp = fopen("LENA_256x256_8bit_1_ZoomIn.raw", "wb");
     for (int i = 0; i < 256; i++) {
         fwrite(Writebuf[i], 1, 256, fp);
     }

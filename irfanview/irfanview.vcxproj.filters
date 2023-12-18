@@ -48,7 +48,22 @@
     <ClCompile Include="week_10.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="C_pro.c">
+    <ClCompile Include="week_11.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="week_12.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="week_12_log.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="week_13.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="week.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="week_.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>

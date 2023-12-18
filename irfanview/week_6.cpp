@@ -19,7 +19,7 @@ int main_6() {
     fclose(fp);
 
     // Á¡¿¬»ê(¹à°Ô)
-    for (int i = 0; i < 256; i++) {
+    /*for (int i = 0; i < 256; i++) {
         for (int j = 0; j < 256; j++) {
             Writebuf[i][j] = Readbuf[i][j] + 20;
             
@@ -33,9 +33,9 @@ int main_6() {
             }
         }
 
-	}
+	}*/
     // Á¡¿¬»ê(¾îµÓ°Ô)
-    /*for (int i = 0; i < 256; i++) {
+    for (int i = 0; i < 256; i++) {
         for (int j = 0; j < 256; j++) {
             Writebuf[i][j] = Readbuf[i][j] - 5;
             
@@ -48,7 +48,7 @@ int main_6() {
                 printf("¹àÀº»ö");
             }
         }
-	}*/
+	}
     
     // ¿µ»ó ÀúÀå
     fp = fopen("AVE256_1_point.raw", "wb");

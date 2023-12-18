@@ -128,8 +128,13 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Change_File_Type.cpp" />
-    <ClCompile Include="C_pro.c" />
+    <ClCompile Include="week.cpp" />
+    <ClCompile Include="week_.cpp" />
     <ClCompile Include="week_10.c" />
+    <ClCompile Include="week_11.cpp" />
+    <ClCompile Include="week_12.cpp" />
+    <ClCompile Include="week_12_log.cpp" />
+    <ClCompile Include="week_13.cpp" />
     <ClCompile Include="week_2.cpp" />
     <ClCompile Include="week_3.cpp" />
     <ClCompile Include="week_3_2.cpp" />
